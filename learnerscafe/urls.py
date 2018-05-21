@@ -16,11 +16,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.conf.urls import url
-from courses.views import HomeView, HelloView
+from courses import views
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    url(r"^hello/$", HelloView.as_view()),
-    path("home/", HomeView.as_view()),
+    url(r"^hello/$", views.HelloView.as_view()),
+    path("", views.HomeView.as_view()),
+    path('groups', views.StudyGroupListView.as_view()),
+    path("<int:pk>/", views.StudyGroupDetailView.as_view()),
 ]

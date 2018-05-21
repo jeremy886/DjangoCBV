@@ -1,5 +1,6 @@
-from django.views.generic import View, TemplateView
+from django.views.generic import View, TemplateView, ListView, DetailView
 from django.http import HttpResponse
+from .models import StudyGroup
 
 
 class HelloView(View):
@@ -16,3 +17,11 @@ class HomeView(TemplateView):
         context["motd"] = "Don't forget to check out new study groups!"
         context["new_groups"] = 5
         return context
+
+
+class StudyGroupListView(ListView):
+    model = StudyGroup
+
+
+class StudyGroupDetailView(DetailView):
+    model = StudyGroup
