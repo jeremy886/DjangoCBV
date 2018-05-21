@@ -1,4 +1,7 @@
-from django.views.generic import View, TemplateView, ListView, DetailView
+from django.views.generic import (
+    View, TemplateView, ListView, DetailView,
+    CreateView, UpdateView, DeleteView,
+)
 from django.http import HttpResponse
 from .models import StudyGroup
 
@@ -25,3 +28,8 @@ class StudyGroupListView(ListView):
 
 class StudyGroupDetailView(DetailView):
     model = StudyGroup
+
+
+class StudyGroupCreateView(CreateView):
+    model = StudyGroup
+    fields = ["name", "location", "host", "next_at"]
