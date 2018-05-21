@@ -1,0 +1,15 @@
+{% extends "courses/base.html" %}
+
+{% block content %}
+<h1>
+    {% if not form.instance.pk %} Register your study group
+    {% else %} Edit {{ form.instance.name }}
+    {% endif %}
+</h1>
+
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" class="btn btn-primary" value="Save">
+</form>
+{% endblock %}

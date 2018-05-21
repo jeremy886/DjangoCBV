@@ -8,9 +8,15 @@ v.01
 v.02
 ====
 
-* django.views.generic.TemplateView
+* see home page
 
 v.03
 ====
 
-*
+* see study group list and details
+
+v.04
+====
+
+* edit models in admin
+

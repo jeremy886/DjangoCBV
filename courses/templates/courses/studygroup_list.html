@@ -1,3 +1,7 @@
+{% extends "courses/base.html" %}
+
+{% block content %}
+
 <h1>Study Group List</h1>
 <ul>
 {% for group in object_list %}
@@ -6,3 +10,5 @@
     <li>No study group yet.</li>
 {% endfor %}
 </ul>
+
+{% endblock %}
