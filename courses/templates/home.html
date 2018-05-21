@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Learner's Cafe</title>
+</head>
+<body>
+<h1>Welcome to Learner's Cafe!</h1>
+
+<p>{{ motd }}</p>
+<p>There {{ new_groups|pluralize:"is,are" }} {{ new_groups }} new study group{{ new_groups|pluralize }} today!</p>
+</body>
+</html>

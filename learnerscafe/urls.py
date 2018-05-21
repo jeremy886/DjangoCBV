@@ -16,10 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.conf.urls import url
-from courses.views import HomeView
+from courses.views import HomeView, HelloView
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    url(r"", HomeView.as_view()),
+    url(r"^hello/$", HelloView.as_view()),
+    path("home/", HomeView.as_view()),
 ]
