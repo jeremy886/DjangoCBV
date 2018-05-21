@@ -44,3 +44,8 @@ class StudyGroupUpdateView(UpdateView):
 class StudyGroupDeleteView(DeleteView):
     model = StudyGroup
     success_url = reverse_lazy("courses:list")
+
+    def get_queryset(self):
+        if not self.request.user.is_superuser:
+            return self.model.objects.filter(host=self.request.user)
+        return self.model.objects.all()

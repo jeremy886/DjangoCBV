@@ -1,3 +1,9 @@
+Use this learning repo:
+#######################
+
+* Account is listed below.
+* I named this app Courses but most of the work was about "Study Group" so it's not intuitive.
+
 
 v0.01
 =====
@@ -43,3 +49,12 @@ v0.08
 =====
 
 * Delete a study group (using a URL)
+
+
+v0.09
+=====
+
+* New staffer: james password: AiFee2oo
+* Only allow to delete a study group if the user is the host or a superuser
+* Allow editing and deleting listed study groups
+* Test it: http://localhost:8000/courses/groups

@@ -5,7 +5,11 @@
 <h1>Study Group List</h1>
 <ul>
 {% for group in object_list %}
-    <li>{{ group.name }} in {{ group.location }}</li>
+    <li>
+        <a href="{% url "courses:update" pk=group.pk %}">{{ group.name }} in {{ group.location }} </a>
+        -----
+        <a href="{% url "courses:delete" pk=group.pk %}">Delete</a>
+    </li>
 {% empty %}
     <li>No study group yet.</li>
 {% endfor %}
