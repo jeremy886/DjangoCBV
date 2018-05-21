@@ -32,8 +32,14 @@ v0.06
 * remap web URLs
 * add a Foreign Key User to Study Group (host)
 
-V0.07
+v0.07
 =====
 
 * allow updating a study group
 * add links to base and detail templates
+
+
+v0.08
+=====
+
+* Delete a study group (using a URL)

@@ -3,6 +3,7 @@ from django.views.generic import (
     CreateView, UpdateView, DeleteView,
 )
 from django.http import HttpResponse
+from django.urls import reverse_lazy
 from .models import StudyGroup
 
 
@@ -38,3 +39,8 @@ class StudyGroupCreateView(CreateView):
 class StudyGroupUpdateView(UpdateView):
     model = StudyGroup
     fields = ["name", "location", "host", "next_at"]
+
+
+class StudyGroupDeleteView(DeleteView):
+    model = StudyGroup
+    success_url = reverse_lazy("courses:list")
