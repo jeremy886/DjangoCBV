@@ -33,3 +33,8 @@ class StudyGroupDetailView(DetailView):
 class StudyGroupCreateView(CreateView):
     model = StudyGroup
     fields = ["name", "location", "host", "next_at"]
+
+
+class StudyGroupUpdateView(UpdateView):
+    model = StudyGroup
+    fields = ["name", "location", "host", "next_at"]

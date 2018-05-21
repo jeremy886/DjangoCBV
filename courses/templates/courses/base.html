@@ -5,6 +5,8 @@
     {% block title %}<title></title>{% endblock %}
 </head>
 <body>
+    <a href="{% url "courses:list" %}">Show all study group</a>
+    <a href="{% url "courses:create" %}">Add new study group</a>
     {% block content %}{% endblock %}
 </body>
 </html>

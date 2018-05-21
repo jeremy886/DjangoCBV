@@ -6,4 +6,8 @@
 <p>Location: {{ object.location }}</p>
 <p>Time: {{ object.next_at }}</p>
 
+<hr/>
+<p><a href="{% url "courses:update" pk=studygroup.pk %}">Edit</a>
+</p>
 {% endblock %}
+

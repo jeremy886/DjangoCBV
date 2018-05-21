@@ -1,33 +1,39 @@
 
-v.01
-====
+v0.01
+=====
 
     superuser: jeremy
     password: AiFee2oo
 
-v.02
-====
+v0.02
+=====
 
 * see home page
 
-v.03
-====
+v0.03
+=====
 
 * see study group list and details
 
-v.04
-====
+v0.04
+=====
 
 * edit models in admin
 
-v.05
-====
+v0.05
+=====
 
 * start using base template to organise the feel and look
 
-v.06
-====
+v0.06
+=====
 
 * use a form to create a study group
 * remap web URLs
 * add a Foreign Key User to Study Group (host)
+
+V0.07
+=====
+
+* allow updating a study group
+* add links to base and detail templates
