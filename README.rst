@@ -58,3 +58,10 @@ v0.09
 * Only allow to delete a study group if the user is the host or a superuser
 * Allow editing and deleting listed study groups
 * Test it: http://localhost:8000/courses/groups
+
+
+v0.10
+=====
+
+* host of the study group is set to the logged-in user by default
+* Test it: http://localhost:8000/courses/groups/create/

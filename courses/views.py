@@ -35,6 +35,11 @@ class StudyGroupCreateView(CreateView):
     model = StudyGroup
     fields = ["name", "location", "host", "next_at"]
 
+    def get_initial(self):
+        initial = super().get_initial()
+        initial["host"] = self.request.user.pk
+        return initial
+
 
 class StudyGroupUpdateView(UpdateView):
     model = StudyGroup
