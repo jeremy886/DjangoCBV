@@ -65,3 +65,8 @@ v0.10
 
 * host of the study group is set to the logged-in user by default
 * Test it: http://localhost:8000/courses/groups/create/
+
+v.0.11
+======
+
+* only logged in users can create, update and delete study groups

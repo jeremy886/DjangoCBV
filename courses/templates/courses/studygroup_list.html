@@ -6,9 +6,7 @@
 <ul>
 {% for group in object_list %}
     <li>
-        <a href="{% url "courses:update" pk=group.pk %}">{{ group.name }} in {{ group.location }} </a>
-        -----
-        <a href="{% url "courses:delete" pk=group.pk %}">Delete</a>
+        <a href="{% url "courses:detail" pk=group.pk %}">{{ group.name }} in {{ group.location }} </a>
     </li>
 {% empty %}
     <li>No study group yet.</li>

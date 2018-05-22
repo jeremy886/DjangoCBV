@@ -6,9 +6,12 @@
 <p>Location: {{ object.location }}</p>
 <p>Time: {{ object.next_at }}</p>
 
-<hr/>
-<p><a href="{% url "courses:update" pk=studygroup.pk %}">Edit</a>
-<p><a href="{% url "courses:delete" pk=studygroup.pk %}">Delete</a>
-</p>
+
+{% if user.is_authenticated %}
+    <hr/>
+    <p><a href="{% url "courses:update" pk=studygroup.pk %}">Edit</a></p>
+    <p><a href="{% url "courses:delete" pk=studygroup.pk %}">Delete</a></p>
+{% endif %}
+
 {% endblock %}
 

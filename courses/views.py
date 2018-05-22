@@ -2,6 +2,7 @@ from django.views.generic import (
     View, TemplateView, ListView, DetailView,
     CreateView, UpdateView, DeleteView,
 )
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.http import HttpResponse
 from django.urls import reverse_lazy
 from .models import StudyGroup
@@ -31,7 +32,7 @@ class StudyGroupDetailView(DetailView):
     model = StudyGroup
 
 
-class StudyGroupCreateView(CreateView):
+class StudyGroupCreateView(LoginRequiredMixin, CreateView):
     model = StudyGroup
     fields = ["name", "location", "host", "next_at"]
 
@@ -41,12 +42,12 @@ class StudyGroupCreateView(CreateView):
         return initial
 
 
-class StudyGroupUpdateView(UpdateView):
+class StudyGroupUpdateView(LoginRequiredMixin, UpdateView):
     model = StudyGroup
     fields = ["name", "location", "host", "next_at"]
 
 
-class StudyGroupDeleteView(DeleteView):
+class StudyGroupDeleteView(LoginRequiredMixin, DeleteView):
     model = StudyGroup
     success_url = reverse_lazy("courses:list")
 
